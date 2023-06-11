@@ -1,27 +1,65 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.card-container {
+    display: flex;
+    justify-content: space-between;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.cate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    height: 95px;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: 4px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 3px;
 }
 
-#container a {
-  text-decoration: none;
+.rounded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%;
+    height: 95px;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: 4px
+}
+
+.swiper-containe {
+    width: 100%;
+    height: 100px;
+}
+
+.swiper-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.card {
+    margin-top: 4px;
+    width: 49%;
 }

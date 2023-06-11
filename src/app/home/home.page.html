@@ -1,20 +1,118 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-menu contentId="main-content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu Content</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>AliiPelis</ion-title>
+        </ion-toolbar>
+        <ion-searchbar></ion-searchbar>
+    </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+
+
+
+
+
+
+    <ion-content class="ion-padding">
+
+
+
+        <swiper-container>
+            <swiper-slide *ngFor="let p of post">
+                <img src="https://image.tmdb.org/t/p/original{{p.poster_path}}" alt=" Imagen " class="rounded-image ">
+            </swiper-slide>
+
+
+        </swiper-container>
+
+
+
+
+
+
+
+
+        <div class="card-container ">
+
+            <ion-card class="cate">
+                <div class="image-container ">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2328/2328666.png " alt="Imagen " class="rounded-image ">
+                </div>
+                <div class="card-content ">
+                    Accion
+                </div>
+            </ion-card>
+
+            <ion-card class="cate">
+                <div class="image-container ">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3658/3658528.png " alt="Imagen " class="rounded-image ">
+                </div>
+                <div class="card-content ">
+                    Comedia
+                </div>
+            </ion-card>
+
+
+            <ion-card class="cate">
+                <div class="image-container ">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1882/1882729.png " alt="Imagen " class="rounded-image ">
+                </div>
+                <div class="card-content ">
+                    Drama
+                </div>
+            </ion-card>
+        </div>
+
+
+
+
+        <div class="card-container ">
+
+            <!-- <ion-card class="p ">
+                <div class="imageP ">
+                    <img src="https://indiehoy.com/wp-content/uploads/2020/11/simpson-historietas-640x480.jpg " alt="Imagen " class="rounded-image ">
+                </div>
+
+            </ion-card> -->
+
+            <ion-card *ngFor="let item of estreno">
+                <img alt=" Silhouette of mountains " src="https://image.tmdb.org/t/p/original{{item.estreno_path}} " />
+                <ion-card-header>
+                    <ion-card-title>Card Title</ion-card-title>
+                    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                </ion-card-header>
+
+                <ion-card-content>
+                    Here's a
+                </ion-card-content>
+            </ion-card>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+    </ion-content>
+
+</div>
